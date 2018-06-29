@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function RemainingPints(){
+function RemainingPints(props){
   return (
-    <div>
-
+    <div className='remaining-pints'>
+      <p>{props.remaining}</p>
     </div>
   );
 }

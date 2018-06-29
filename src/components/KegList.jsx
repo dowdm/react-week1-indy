@@ -1,5 +1,6 @@
 import React from 'react';
 import KegProfile from './KegProfile';
+import RemainingPints from './RemainingPints';
 
 const masterKegList= [
     {
@@ -56,14 +57,13 @@ function KegList(){
   return (
     <div className='keglist-wrapper'>
          {masterKegList.map((keg, index)=>
-               <KegProfile
-                 name={keg.name}
-                 brewer={keg.brewer}
-                 description={keg.description}
-                 abv={keg.abv}
-                 price={keg.price}
-                 remaining={keg.remaining}
-                 key={index}/>
+               <KegProfile name={keg.name}
+                            brewer={keg.brewer}
+                            description={keg.description}
+                            abv={keg.abv}
+                            price={keg.price}
+                            remaining={keg.remaining}
+                            key={index}/>
          )}
      </div>
   );

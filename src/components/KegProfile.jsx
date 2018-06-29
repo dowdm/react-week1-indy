@@ -1,4 +1,5 @@
 import React from 'react';
+import RemainingPints from './RemainingPints';
 import PropTypes from 'prop-types';
 
 function KegProfile(props){
@@ -17,6 +18,7 @@ function KegProfile(props){
       </div>
       <div className='profile-abv'><p>{props.abv}</p>
       </div>
+      <RemainingPints remaining={props.remaining}/> 
      </div>
    </div>
   );
