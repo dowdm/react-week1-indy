@@ -1,5 +1,6 @@
 import React from 'react';
 import './header.css';
+import {Link} from 'react-router-dom';
 
 function Header(){
   var headerStyles = {
@@ -11,7 +12,11 @@ function Header(){
   }
   return (
     <div className='header-wrapper' style={headerStyles}>
-      <h1>Welcome to Matt's Faßecke</h1>
+      <ul className='top-bar-links'>
+          <Link to='/'><li>Home</li></Link>
+          <Link to='/keglist'><li>Keg List</li></Link>
+          <Link to='/newkegform'><li>Admin</li></Link>
+        </ul>
     </div>
   );
 }
