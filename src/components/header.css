@@ -27,5 +27,4 @@
 
 .header-wrapper li:hover {
   cursor: pointer;
-  animation: lightUp .5s linear both;
 }

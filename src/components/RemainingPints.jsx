@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function RemainingPints(props){
   return (
     <div className='remaining-pints'>
-      <p>{props.remaining}</p>
+      <p>{props.remaining} Pints Remaining</p>
     </div>
   );
 }
