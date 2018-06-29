@@ -52,3 +52,6 @@ For support contact: theofficialmatt@gmail.com
 This software is licensed under the GPL license.
 
 ## Notes:
+1. How to properly arrange subcomponent tags within a supercomponent was a good challenge. I don't think we did it in class, and the looping syntax with map is particular about it too. React documentation only shows how to do it outside of a mapping. Trial and error.
+2. Are proptypes required on a sub-subcomponent since the subcomponent itself requires the type, according to eslint?
+3.
