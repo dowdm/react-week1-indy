@@ -14,8 +14,8 @@ function App(){
       <Header/>
       <Switch>
         <Route exact path = '/' component={Welcome}/>
-        <Route exact path = '/newkegform' component={NewKegForm}/>
-        <Route exact path = '/keglist' component={KegList}/>
+        <Route exact path = '/kegs/new' component={NewKegForm}/>
+        <Route exact path = '/kegs' component={KegList}/>
         <Route component={Error404}/>
       </Switch>
     </div>

@@ -15,8 +15,8 @@ function Header(){
       <div>
         <ul className='top-bar-links' >
           <Link to='/'><li>Home</li></Link>
-          <Link to='/keglist'><li>Keg List</li></Link>
-          <Link to='/newkegform'><li>Admin</li></Link>
+          <Link to='/kegs'><li>Keg List</li></Link>
+          <Link to='/kegs/new'><li>Admin</li></Link>
         </ul>
       </div>
     </div>
