@@ -20,6 +20,7 @@ B. As an admin, I want to be able to add a keg of beer
 ![alt tag](screenshots/data.png "Data Model") -->
 
 ## Setup/Installation Requirements
+VIEW at https://dowdm.github.io/react-week1-indy
 1. Clone repository from https://github.com/dowdm/react-week1-indy.git
 2. Navigate into project folder from terminal
 3. Run npm install, assuming npm exists on your device
