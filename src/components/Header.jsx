@@ -8,8 +8,8 @@ function Header(){
     fontSize: '60px',
     textAlign: 'center',
     textShadow: '1px 2px #ff8080',
-    
-  }
+
+  };
   return (
     <div className='header-wrapper' style={headerStyles} >
       <div>

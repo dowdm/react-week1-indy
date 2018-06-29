@@ -9,7 +9,7 @@ function Welcome(){
     color: 'white',
     textAlign: 'center',
     textShadow: '2px 3px #ff8080'
-  }
+  };
   return (
     <div className='welcome-wrapper' style={welcomeStyles}>
       <h1>Welcome to Matt's Faßecke</h1>

@@ -9,7 +9,7 @@ function KegProfile(props){
     fontFamily: 'helvetica',
     fontSize: '20px',
     textAlign: 'center',
-  }
+  };
 
   return (
     <div className='keg-profile-wrapper' >
@@ -18,7 +18,7 @@ function KegProfile(props){
         <div className='profile-name'style={profileStyles}><h1> {props.name}</h1>
         </div>
         <div className='profile-description'>
-        <h3> {props.description} </h3>
+          <h3> {props.description} </h3>
         </div>
         <div className='profile-content'>
           <div className='profile-brewer'>
@@ -28,10 +28,9 @@ function KegProfile(props){
           </div>
           <Price price={props.price}/>
           <RemainingPints remaining={props.remaining}/>
-         </div>
+        </div>
       </div>
-
-   </div>
+    </div>
   );
 }
 
@@ -40,6 +39,8 @@ KegProfile.propTypes = {
   brewer: PropTypes.string,
   description: PropTypes.string,
   abv: PropTypes.string,
+  price: PropTypes.string,
+  remaining: PropTypes.string
 };
 
 export default KegProfile;
