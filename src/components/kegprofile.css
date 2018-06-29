@@ -4,6 +4,7 @@
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
   width: 300px;
   margin-top: 20px;
+  background-color: #fff2cc;
 }
 
 .profile-name{
@@ -13,9 +14,14 @@
 .profile-description{
   font-family: helvetica;
   text-align: center;
+  background-color:  #ccfff5;
 }
 
 .profile-content{
   margin-left: 10%;
   font-family: helvetica;
+}
+
+.brew{
+  font-size: 12px;
 }

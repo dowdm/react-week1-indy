@@ -9,4 +9,8 @@ function Price(props){
   );
 }
 
+Price.propTypes = {
+  price: PropTypes.string
+};
+
 export default Price;

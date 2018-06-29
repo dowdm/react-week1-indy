@@ -9,4 +9,8 @@ function RemainingPints(props){
   );
 }
 
+RemainingPints.propTypes = {
+  remaining: PropTypes.string
+};
+
 export default RemainingPints;
