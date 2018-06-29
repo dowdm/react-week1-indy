@@ -1,5 +1,6 @@
 import React from 'react';
 import RemainingPints from './RemainingPints';
+import Price from './Price';
 import PropTypes from 'prop-types';
 import './kegprofile.css';
 
@@ -19,16 +20,12 @@ function KegProfile(props){
         <h3> {props.description} </h3>
         </div>
         <div className='profile-content'>
-
           <div className='profile-brewer'>
           <h3>Brewed by {props.brewer}</h3>
           </div>
-
-
-          <div className='profile-price'><p>${props.price}</p>
-          </div>
           <div className='profile-abv'><p>ABV: {props.abv}</p>
           </div>
+          <Price price={props.price}/>
           <RemainingPints remaining={props.remaining}/>
          </div>
       </div>
