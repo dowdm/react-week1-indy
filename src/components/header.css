@@ -1,1 +1,30 @@
+.header-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 
+}
+
+.header-wrapper a{
+  color: black;
+}
+
+.header-wrapper ul {
+  list-style: none;
+  display: flex;
+}
+
+.header-wrapper li {
+  background-color: black;
+  margin-left: 40px;
+  border-radius: 3px;
+  padding: 8px;
+  border: 1px solid black;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+.header-wrapper li:hover {
+  cursor: pointer;
+  animation: lightUp .5s linear both;
+}

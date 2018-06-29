@@ -4,19 +4,21 @@ import {Link} from 'react-router-dom';
 
 function Header(){
   var headerStyles = {
-    fontFamily: 'courier new',
+    fontFamily: 'helvetica',
     fontSize: '60px',
-    color: 'white',
     textAlign: 'center',
-    textShadow: '2px 3px #ff8080'
+    textShadow: '1px 2px #ff8080',
+    color: 'white'
   }
   return (
-    <div className='header-wrapper' style={headerStyles}>
-      <ul className='top-bar-links'>
+    <div className='header-wrapper' style={headerStyles} >
+      <div>
+        <ul className='top-bar-links' >
           <Link to='/'><li>Home</li></Link>
           <Link to='/keglist'><li>Keg List</li></Link>
           <Link to='/newkegform'><li>Admin</li></Link>
         </ul>
+      </div>
     </div>
   );
 }
