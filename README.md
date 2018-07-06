@@ -7,8 +7,8 @@
 
 ## Description
 
-This application will allow users view a list of beers and admin will be allowed to add kegs to the beer list. Differing from Angular, React components may be more granular. Since objects aren't the focus of React, items that may normally exist as a component in Angular may be subdivided in React to allow for more efficient DOM mutations. For example, although "price" and "pints remaining" are 'properties' of a keg, their DOM mutation may be more frequent than the change of the entire keg, therefore necessitating more granular components for those properties to update at shorter time intervals.
-![Diagram](https://github.com/dowdm/react-week1-indy/blob/master/src/assets/images/IMG-4379.jpg)
+This application will allow users view a list of beers and admin will be allowed to add kegs to the beer list. Differing from Angular, React components may be more granular. Since objects aren't the focus of React, items that may normally exist as a component in Angular may be subdivided in React to allow for more efficient DOM mutations.
+![Diagram](https://github.com/dowdm/react-week1-indy/blob/week2/src/assets/images/IMG-4399.JPG)
 
 
 #### User Story
@@ -48,6 +48,7 @@ For support contact: theofficialmatt@gmail.com
 * React Hot Loader 3.0.0b7
 * Babel Core 6.24.1
 * Webpack 3.4.0
+* UUID
 
 ### License
 
@@ -56,5 +57,7 @@ This software is licensed under the GPL license.
 ## Notes:
 1. How to properly arrange subcomponent tags within a supercomponent was a good challenge. I don't think we did it in class, and the looping syntax with map is particular about it too. React documentation only shows how to do it outside of a mapping. Trial and error.
 2. Are proptypes required on a sub-subcomponent since the subcomponent itself requires the type, according to eslint?
-3. Should the abv be its own component to dynamically update CSS? 
+3. Should the abv be its own component to dynamically update CSS?
 4. Started gh-pages branch and worked on that branch and deployment from approx 4PM onward  
+5. Initially all keg profiles had a buy button, that had 2 stacked click events for a: setting the selectedKeg state and b: subtracting 1 pint. Since the synthetic events need to be chained async, and I didn't have enough time to explore that, I just conditionally render a buy button.
+6. I lost an hour because 'return' wasn't spelled correctly.

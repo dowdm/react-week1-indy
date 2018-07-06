@@ -3,15 +3,23 @@ import PropTypes from 'prop-types';
 import './remainingpints.css';
 
 function RemainingPints(props){
-  return (
-    <div className='remaining-pints'>
-      <p>{props.remaining} Pints Remaining</p>
-    </div>
-  );
+  if (props.remaining != 0){
+    return (
+      <div className='remaining-pints'>
+        <p>{props.remaining} Pints Remaining</p>
+      </div>
+    );
+  }else {
+    return(
+      <div className='remaining-pints'>
+        <p>Ausverkauft</p>
+      </div>
+    );
+  }
 }
 
 RemainingPints.propTypes = {
-  remaining: PropTypes.string
+  remaining: PropTypes.number
 };
 
 export default RemainingPints;
