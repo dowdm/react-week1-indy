@@ -8,7 +8,7 @@
 ## Description
 
 This application will allow users view a list of beers and admin will be allowed to add kegs to the beer list. Differing from Angular, React components may be more granular. Since objects aren't the focus of React, items that may normally exist as a component in Angular may be subdivided in React to allow for more efficient DOM mutations.
-![Diagram](https://github.com/dowdm/react-week1-indy/blob/master/src/assets/images/IMG-4379.jpg)
+![Diagram](https://github.com/dowdm/react-week1-indy/blob/week2/src/assets/images/IMG-4399.jpg)
 
 
 #### User Story
