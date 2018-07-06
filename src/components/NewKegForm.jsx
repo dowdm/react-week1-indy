@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './newkegform.css'
+import './newkegform.css';
 
 function NewKegForm(props){
   let _name = null;
@@ -19,11 +19,11 @@ function NewKegForm(props){
       abv: _abv.value,
       price: _price.value,
       remaining: 120});
-      _name.value = '';
-      _brewer.value = '';
-      _description.value = '';
-      _abv.value = '';
-      _price.value = '';
+    _name.value = '';
+    _brewer.value = '';
+    _description.value = '';
+    _abv.value = '';
+    _price.value = '';
   }
 
   return (

@@ -16,6 +16,8 @@ function BuyButton(props) {
 }
 BuyButton.propTypes = {
   onBuyButtonClick: PropTypes.func,
-  selectedKegId: PropTypes.string
+  selectedKeg: PropTypes.string,
+  kegId: PropTypes.string,
+  onKegSelection: PropTypes.func
 };
 export default BuyButton;

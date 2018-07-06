@@ -34,10 +34,9 @@ class App extends React.Component {
   }
 
   handleBuyButtonClick(kegId) {
-    console.log(kegId +'buyclick');
     let newMasterKegList = Object.assign({}, this.state.masterKegList);
     if( newMasterKegList[kegId].remaining > 0){
-    newMasterKegList[kegId].remaining = this.state.masterKegList[kegId].remaining - 1;
+      newMasterKegList[kegId].remaining = this.state.masterKegList[kegId].remaining - 1;
     } else {
       newMasterKegList[kegId].remaining = 0;
     }
@@ -46,14 +45,6 @@ class App extends React.Component {
 
 
   render(){
-   //  let optionalSelectedKegContent = null;
-   // if (this.state.selectedKeg != null){
-   //   optionalSelectedKegContent =  <KegProfile selectedKeg={this.state.masterKegList[this.state.selectedKeg]}
-   //     selectedKegId={this.state.selectedKeg} onBuyButtonClick={this.handleBuyButtonClick}/>;
-   // }
-
-   // onKegSelection={this.handleKegSelection}
-   // selectedKeg={this.state.selectedKeg}
     return (
       <div className='app-wrapper'>
         <Header/>
@@ -67,9 +58,9 @@ class App extends React.Component {
           <Route exact path = '/kegs'  render={()=>
             <div>
               <KegList kegList={this.state.masterKegList}
-                      onKegSelection={this.handleKegSelection}
-                      selectedKeg={this.state.selectedKeg}
-                      onBuyButtonClick={this.handleBuyButtonClick}   />
+                onKegSelection={this.handleKegSelection}
+                selectedKeg={this.state.selectedKeg}
+                onBuyButtonClick={this.handleBuyButtonClick}/>
             </div>
           }/>
           <Route component={Error404}/>
