@@ -18,12 +18,11 @@ function NewKegForm(props){
       abv: _abv.value,
       price: _price.value,
       remaining: 120});
-      _name.value = ''
-      _name = null;
-      _brewer = null;
-      _description = null;
-      _abv = null;
-      _price = null;
+      _name.value = '';
+      _brewer.value = '';
+      _description.value = '';
+      _abv.value = '';
+      _price.value = '';
   }
 
   return (

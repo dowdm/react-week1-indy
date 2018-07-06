@@ -12,7 +12,10 @@ function KegProfile(props){
   };
 
   return (
+
     <div className='keg-profile-wrapper' >
+      <p>{props.name}</p>
+      <p>jadhfkljsdhfjsdp</p>
       <div className ='keg-profile'>
 
         <div className='profile-name'style={profileStyles}><h1> {props.name}</h1>
@@ -40,7 +43,7 @@ KegProfile.propTypes = {
   description: PropTypes.string,
   abv: PropTypes.string,
   price: PropTypes.string,
-  remaining: PropTypes.string
+  remaining: PropTypes.number
 };
 
 export default KegProfile;

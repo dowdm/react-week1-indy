@@ -13,7 +13,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterKegList:{},
+      masterKegList: {},
       selectedKeg: null
     };
     this.handleAddButtonClick = this.handleAddButtonClick.bind(this);
@@ -23,10 +23,11 @@ class App extends React.Component {
 
   handleAddButtonClick(newKeg) {
     let newKegId = v4();
-    let newMasterTamList = Object.assign({}, this.state.masterKegList, {
+    let newMasterKegList = Object.assign({}, this.state.masterKegList, {
       [newKegId]: newKeg
     });
     this.setState({masterKegList: newMasterKegList});
+    console.log(this.state.masterKegList);
   }
 
   handleKegSelection(kegId) {
@@ -38,18 +39,21 @@ class App extends React.Component {
     if( newMasterKegList[kegId].remaining >= 1){
     newMasterKegList[kegId].remaining = this.state.masterKegList[kegId].remaining - 1;
     } else {
-      newMasterTamList[kegId].remaining = 0;
+      newMasterKegList[kegId].remaining = 0;
     }
     this.setState(() => {newMasterKegList;});
   }
 
 
   render(){
-    let optionalSelectedKegContent = null;
-   if (this.state.selectedKeg != null){
-     optionalSelectedKegContent =  <KegProfile selectedKeg={this.state.masterKegList[this.state.selectedKeg]}
-       selectedKegId={this.state.selectedKeg} onBuyButtonClick={this.handleBuyButtonClick}/>;
-   }
+   //  let optionalSelectedKegContent = null;
+   // if (this.state.selectedKeg != null){
+   //   optionalSelectedKegContent =  <KegProfile selectedKeg={this.state.masterKegList[this.state.selectedKeg]}
+   //     selectedKegId={this.state.selectedKeg} onBuyButtonClick={this.handleBuyButtonClick}/>;
+   // }
+
+   // onKegSelection={this.handleKegSelection}
+   // selectedKeg={this.state.selectedKeg}
     return (
       <div className='app-wrapper'>
         <Header/>
@@ -62,7 +66,7 @@ class App extends React.Component {
           }/>
           <Route exact path = '/kegs'  render={()=>
             <div>
-              <KegList kegList={this.state.masterKegList} onKegSelection={this.handleKegSelection}  selectedKeg={this.state.selectedKeg} />
+              <KegList kegList={this.state.masterKegList}   />
             </div>
           }/>
           <Route component={Error404}/>
