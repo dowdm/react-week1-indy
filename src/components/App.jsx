@@ -27,12 +27,10 @@ class App extends React.Component {
       [newKegId]: newKeg
     });
     this.setState({masterKegList: newMasterKegList});
-    console.log(this.state.masterKegList);
   }
 
   handleKegSelection(kegId) {
     this.setState({selectedKeg: kegId});
-    console.log(this.state.selectedKeg + 'handleselection')
   }
 
   handleBuyButtonClick(kegId) {
