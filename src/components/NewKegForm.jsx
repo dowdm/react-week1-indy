@@ -29,53 +29,53 @@ function NewKegForm(props){
   return (
     <div className='form-wrapper'>
       <form onSubmit={handleAddSubmission} className='formular'>
-        <div>
-          <label>NAME</label>
+        <div className='formular-name'>
+          <label>NAME:  </label>
           <input
             type='text'
             id='name'
-            placeholder='Beer Name'
+            placeholder='Sumpin Easy'
             required
             ref={(input) => {_name = input;}}/>
         </div>
         <div>
-          <label>BREWERY</label>
+          <label>BREWERY:  </label>
           <input
             type='text'
             id='brewer'
-            placeholder='Brewery Name'
+            placeholder='Lagunitas'
             required
             ref={(input) => {_brewer = input;}}/>
         </div>
-        <div>
-          <label>BEER TYPE</label>
+        <div className='formular-description'>
+          <label>BEER TYPE:  </label>
           <input
             type='text'
             id='description'
-            placeholder='Description'
+            placeholder='Ale'
             required
             ref={(input) => {_description = input;}}/>
         </div>
         <div>
-          <label>ABV%</label>
+          <label>ABV % :  </label>
           <input
             type='text'
             id='abv'
-            placeholder='ABV %'
+            placeholder='5.7'
             required
             ref={(input) => {_abv = input;}}/>
         </div>
         <div>
-          <label>PRICE IN WHOLE DOLLARS</label>
+          <label>PRICE:  </label>
           <input
             type='number'
             id='price'
-            placeholder='Price'
+            placeholder='6'
             required
             ref={(input) => {_price = input;}}/>
         </div>
         <div>
-          <button type='submit'>Add Keg to Menu</button>
+          <button  className='add' type='submit'>Add Keg to Menu</button>
         </div>
       </form>
     </div>
