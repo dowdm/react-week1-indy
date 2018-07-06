@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './newkegform.css'
 
 function NewKegForm(props){
   let _name = null;
@@ -26,34 +27,56 @@ function NewKegForm(props){
   }
 
   return (
-    <div>
-      <form onSubmit={handleAddSubmission}>
-        <input
-          type='text'
-          id='name'
-          placeholder='Beer Name'
-          ref={(input) => {_name = input;}}/>
-        <input
-          type='text'
-          id='brewer'
-          placeholder='Brewery Name'
-          ref={(input) => {_brewer = input;}}/>
-        <input
-          type='text'
-          id='description'
-          placeholder='Description'
-          ref={(input) => {_description = input;}}/>
-        <input
-          type='text'
-          id='abv'
-          placeholder='ABV %'
-          ref={(input) => {_abv = input;}}/>
-        <input
-          type='number'
-          id='price'
-          placeholder='Price'
-          ref={(input) => {_price = input;}}/>
-        <button type='submit'>Add Keg to Menu</button>
+    <div className='form-wrapper'>
+      <form onSubmit={handleAddSubmission} className='formular'>
+        <div>
+          <label>NAME</label>
+          <input
+            type='text'
+            id='name'
+            placeholder='Beer Name'
+            required
+            ref={(input) => {_name = input;}}/>
+        </div>
+        <div>
+          <label>BREWERY</label>
+          <input
+            type='text'
+            id='brewer'
+            placeholder='Brewery Name'
+            required
+            ref={(input) => {_brewer = input;}}/>
+        </div>
+        <div>
+          <label>BEER TYPE</label>
+          <input
+            type='text'
+            id='description'
+            placeholder='Description'
+            required
+            ref={(input) => {_description = input;}}/>
+        </div>
+        <div>
+          <label>ABV%</label>
+          <input
+            type='text'
+            id='abv'
+            placeholder='ABV %'
+            required
+            ref={(input) => {_abv = input;}}/>
+        </div>
+        <div>
+          <label>PRICE IN WHOLE DOLLARS</label>
+          <input
+            type='number'
+            id='price'
+            placeholder='Price'
+            required
+            ref={(input) => {_price = input;}}/>
+        </div>
+        <div>
+          <button type='submit'>Add Keg to Menu</button>
+        </div>
       </form>
     </div>
   );

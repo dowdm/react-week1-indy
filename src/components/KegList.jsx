@@ -7,7 +7,6 @@ import PropTypes from 'prop-types';
 function KegList(props){
   return (
     <div className='keglist-wrapper'>
-      <h1>Our Selection:</h1>
         {Object.keys(props.kegList).map(function(kegId){
           var keg = props.kegList[kegId];
           return <KegProfile
