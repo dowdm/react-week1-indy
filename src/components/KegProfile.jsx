@@ -16,7 +16,7 @@ function KegProfile(props){
 
     <div className='keg-profile-wrapper' >
 
-      <div className ='keg-profile' onClick={() => {props.onKegSelection(props.KegId);}}>
+      <div className ='keg-profile' onClick={() => {props.onKegSelection(props.kegId);}}>
 
         <div className='profile-name'style={profileStyles}><h1> {props.name}</h1>
         </div>
@@ -32,8 +32,9 @@ function KegProfile(props){
           <Price price={props.price}/>
           <RemainingPints remaining={props.remaining}/>
           <BuyButton
-        onBuyButtonClick = {props.onBuyButtonClick}
-        selectedKegId = {props.selectedKegId} />
+            onBuyButtonClick = {props.onBuyButtonClick}
+            onKegSelection ={props.onKegSelection}
+            selectedKeg = {props.selectedKeg} />
         </div>
       </div>
     </div>

@@ -32,9 +32,11 @@ class App extends React.Component {
 
   handleKegSelection(kegId) {
     this.setState({selectedKeg: kegId});
+    console.log(this.state.selectedKeg + 'handleselection')
   }
 
   handleBuyButtonClick(kegId) {
+    console.log(kegId +'buyclick');
     let newMasterKegList = Object.assign({}, this.state.masterKegList);
     if( newMasterKegList[kegId].remaining >= 1){
     newMasterKegList[kegId].remaining = this.state.masterKegList[kegId].remaining - 1;

@@ -10,7 +10,6 @@ function KegList(props){
       <h1>Our Selection:</h1>
         {Object.keys(props.kegList).map(function(kegId){
           var keg = props.kegList[kegId];
-          console.log(keg.name);
           return <KegProfile
           name={keg.name}
           brewer={keg.brewer}
@@ -21,6 +20,7 @@ function KegList(props){
           key={kegId}
           onBuyButtonClick = {props.onBuyButtonClick}
           onKegSelection ={props.onKegSelection}
+          selectedKeg = {props.selectedKeg}
           kegId={kegId}/>;
       })}
     </div>

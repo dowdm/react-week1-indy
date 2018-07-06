@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 function BuyButton(props) {
 
   function handleButtonClick() {
-    props.onBuyButtonClick(props.selectedKegId);
+    props.onBuyButtonClick(props.selectedKeg);
   }
 
   return(
-    <div>
+    <div onClick={() => {props.onKegSelection(props.kegId);}}>
       <button onClick={handleButtonClick}>Buy A Pint</button>
     </div>
   );
