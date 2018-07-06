@@ -19,7 +19,8 @@ function KegList(props){
           price={keg.price}
           remaining={keg.remaining}
           key={kegId}
-
+          onBuyButtonClick = {props.onBuyButtonClick}
+          onKegSelection ={props.onKegSelection}
           kegId={kegId}/>;
       })}
     </div>

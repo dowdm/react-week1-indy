@@ -3,6 +3,7 @@ import RemainingPints from './RemainingPints';
 import Price from './Price';
 import PropTypes from 'prop-types';
 import './kegprofile.css';
+import BuyButton from './BuyButton'
 
 function KegProfile(props){
   var profileStyles = {
@@ -14,9 +15,8 @@ function KegProfile(props){
   return (
 
     <div className='keg-profile-wrapper' >
-      <p>{props.name}</p>
-      <p>jadhfkljsdhfjsdp</p>
-      <div className ='keg-profile'>
+
+      <div className ='keg-profile' onClick={() => {props.onKegSelection(props.KegId);}}>
 
         <div className='profile-name'style={profileStyles}><h1> {props.name}</h1>
         </div>
@@ -31,6 +31,9 @@ function KegProfile(props){
           </div>
           <Price price={props.price}/>
           <RemainingPints remaining={props.remaining}/>
+          <BuyButton
+        onBuyButtonClick = {props.onBuyButtonClick}
+        selectedKegId = {props.selectedKegId} />
         </div>
       </div>
     </div>

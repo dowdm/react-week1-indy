@@ -11,7 +11,7 @@ function RemainingPints(props){
 }
 
 RemainingPints.propTypes = {
-  remaining: PropTypes.string
+  remaining: PropTypes.number
 };
 
 export default RemainingPints;

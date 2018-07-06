@@ -66,7 +66,10 @@ class App extends React.Component {
           }/>
           <Route exact path = '/kegs'  render={()=>
             <div>
-              <KegList kegList={this.state.masterKegList}   />
+              <KegList kegList={this.state.masterKegList}
+                      onKegSelection={this.handleKegSelection}
+                      selectedKeg={this.state.selectedKeg}
+                      onBuyButtonClick={this.handleBuyButtonClick}   />
             </div>
           }/>
           <Route component={Error404}/>
